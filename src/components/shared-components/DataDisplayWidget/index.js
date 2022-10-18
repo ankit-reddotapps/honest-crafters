@@ -6,13 +6,14 @@ import CustomStatistic from '../CustomStatistic'
 import './index.css';
 
 const DataDisplayWidget = props => {
-	const { size, value, title, icon, color, avatarSize, vertical } = props
-	const customStatisticProps = { size, value, title }
+	const { size, value, title, text , icon, color, avatarSize, vertical, alignItems } = props
+	const customStatisticProps = { size, value, text }
 	return (
 		<Card>
-			<Flex alignItems="start" flexDirection={vertical ? 'column' : 'row'}>
-				{/* <Avatar size={avatarSize} shape="square" icon={icon} className={`ant-avatar-${color}`}/>	 */}
-				<div className='title'>Revenue</div>
+			<Flex alignItems={alignItems} flexDirection={vertical ? 'column' : 'row'} >
+				{icon && <Avatar size={avatarSize} shape="square" icon={icon} className={`ant-avatar-${color} mb-4`}/>}
+					
+				<div className='title'>{title}</div>
 				<div className={vertical ? 'mt-3 text-center' : 'ml-3'}>
 					<CustomStatistic {...customStatisticProps}/>
 				</div>

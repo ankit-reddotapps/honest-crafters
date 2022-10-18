@@ -8,6 +8,7 @@ import NavSearch  from './NavSearch';
 import { toggleCollapsedNav, onMobileNavToggle } from 'redux/actions/Theme';
 import { NAV_TYPE_TOP, SIDE_NAV_COLLAPSED_WIDTH, SIDE_NAV_WIDTH } from 'constants/ThemeConstant';
 import utils from 'utils'
+import NavRight from "./NavRight";
 
 const { Header } = Layout;
 
@@ -54,10 +55,10 @@ export const HeaderNav = props => {
 
   return (
     <Header className={`app-header ${navMode}`} style={{backgroundColor: headerNavColor}}>
-      <div className={`app-header-wrapper ${isNavTop ? 'layout-top-nav' : ''}`}>
+      <div className={`app-header-wrapper pl-5 pr-5 ${isNavTop ? 'layout-top-nav' : ''}`}>
         <Logo logoType={navMode}/>
         <div className="nav" style={{width: `calc(100% - ${getNavWidth()})`}}>
-          <div className="nav-left">
+          {/* <div className="nav-left">
             <ul className="ant-menu ant-menu-root ant-menu-horizontal">          
               {
                 isNavTop && !isMobile ?
@@ -68,9 +69,10 @@ export const HeaderNav = props => {
                 </li>
               }
             </ul>
-          </div>
-          <div className="nav-right">
-            <NavPanel direction={direction} />
+          </div> */}
+          <div className="nav-right mr-0">
+            {/* <NavPanel direction={direction} /> */}
+            <NavRight/>
           </div>
           <NavSearch active={searchActive} close={onSearchClose}/>
         </div>

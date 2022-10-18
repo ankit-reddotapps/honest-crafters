@@ -53,7 +53,7 @@ export const Logo = (props) => {
   const isMobile = !utils.getBreakPoint(useBreakpoint()).includes('lg')
   return (
     <div
-      className={`${getLogoDisplay(isMobile, props.mobileLogo)} pl-5`} 
+      // className={`${getLogoDisplay(isMobile, props.mobileLogo)} `} 
       style={{width: `${getLogoWidthGutter(props, isMobile)}`}}>
       {/* <img src={getLogo(props)} alt={`${APP_NAME} logo`}/> */}
       <img src={logo}></img>

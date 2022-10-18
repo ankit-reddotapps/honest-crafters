@@ -20,11 +20,11 @@ const Value = props => {
 }
 
 export const CustomStatistic = props => {
-	const { size, value, title } = props;
+	const { size, value, title , text } = props;
 	return (
 		<div>
 			<Value value={value} size={size}/>
-			<p className="mb-0 text-muted">{title}</p>
+			<p className="mb-0 text-muted">{text}</p>
 		</div>
 	)
 }
