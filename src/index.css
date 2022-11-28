@@ -1,9 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 * {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Inter', sans-serif !important;
   
-}
+  }
+  .ant-picker{
+    width: 100%;
+  }
+
+  
 
 
 .loading.cover-content {
@@ -26,4 +31,20 @@
 }
 .loading .ant-spin {
   color: #3e79f7;
+}
+
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: #0099A8 !important;
+}
+
+.ant-tabs-ink-bar{
+  background: #0099A8 !important;
+}
+
+.Part_Material_View_Details_Tabs .ant-tabs-nav-list{
+  margin-left: 360px;
+}
+
+.ant-input-number{
+  width: 100%;
 }

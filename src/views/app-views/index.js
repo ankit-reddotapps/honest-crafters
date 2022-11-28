@@ -3,6 +3,8 @@ import { Switch, Route, Redirect } from "react-router-dom";
 import Loading from 'components/shared-components/Loading';
 import { APP_PREFIX_PATH } from 'configs/AppConfig'
 import Finance from "./Dashboard/Finance";
+import UserManagement from "./UserManagement/UserManagement";
+import AccountManagement from "./AccountManagement/AccountManagement";
 
 export const AppViews = () => {
   return (
@@ -14,6 +16,12 @@ export const AppViews = () => {
     
         <Route path={`${APP_PREFIX_PATH}/dashboard/sales`} component={lazy(() => import(`./Dashboard/Sales`))} />
         <Route path={`${APP_PREFIX_PATH}/dashboard/inventory`} component={lazy(() => import(`./Dashboard/Inventory`))} />
+        <Route path={`${APP_PREFIX_PATH}/user-management`} component={lazy(() => import(`./UserManagement/UserManagement`))} />
+        <Route path={`${APP_PREFIX_PATH}/account-management`} component={lazy(() => import(`./AccountManagement/AccountManagement`))} />
+        <Route path={`${APP_PREFIX_PATH}/inquiry-management`} component={lazy(() => import(`./InquiryManagement/InquiryManagement`))} />
+        <Route path={`${APP_PREFIX_PATH}/items-and-services`} component={lazy(() => import(`./ItemsAndServices/ItemsAndServices`))} />
+        <Route path={`${APP_PREFIX_PATH}/inventory-management`} component={lazy(() => import(`./InventoryManagement/InventoryManagement`))} />
+        
         <Redirect from={`${APP_PREFIX_PATH}`} to={`${APP_PREFIX_PATH}/dashboard/finance`} />
         
       </Switch>

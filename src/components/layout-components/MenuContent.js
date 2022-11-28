@@ -8,6 +8,8 @@ import { connect } from "react-redux";
 import { SIDE_NAV_LIGHT, NAV_TYPE_SIDE } from "constants/ThemeConstant";
 import utils from 'utils'
 import { onMobileNavToggle } from "redux/actions/Theme";
+import { WhatsappIcon } from "assets/svg/icon";
+import { DashboardIcon } from "configs/svgIcons";
 
 const { SubMenu } = Menu;
 const { useBreakpoint } = Grid;
@@ -90,6 +92,11 @@ const SideNavContent = (props) => {
             <span>{setLocale(localization, menu?.title)}</span>
             {menu.path ? <Link onClick={() => closeMobileNav()} to={menu.path} /> : null}
           </Menu.Item>
+          // <Menu.Item key={menu.key}>
+          //   {menu.icon ? <Icon component={DashboardIcon} /> : null}
+          //   <span>{setLocale(localization, menu?.title)}</span>
+          //   {menu.path ? <Link onClick={() => closeMobileNav()} to={menu.path} /> : null}
+          // </Menu.Item>
         )
       )}
     </Menu>

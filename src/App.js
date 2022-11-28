@@ -1,22 +1,8 @@
-// import SideNav from 'components/layout-components/SideNav';
-// import MainHeader from 'components/MainHeader/MainHeader'
-// import Sidebar from 'components/Sidebar/Sidebar';
-// import React from 'react'
 
-// const App = () => {
-//   return (
-//     <>
-//        <div><MainHeader/></div>
-//        <div><Sidebar/></div>
-//     </>
-    
-//   )
-// }
-
-// export default App;
 
 import React from 'react';
 import { Provider } from 'react-redux';
+import { Tabs  } from 'antd';
 import store from './redux/store';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Views from './views';
@@ -42,7 +28,11 @@ function App() {
         </ThemeSwitcherProvider>
       </Provider>
     </div>
+    
   );
 }
 
 export default App;
+
+
+

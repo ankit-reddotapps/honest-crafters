@@ -85,7 +85,7 @@ const ChartWidget = ({title, series, width, height, xAxis, customOptions, card, 
 	return (
 		<>
 			{card ? 
-				<Card >
+				<Card  >
 					<div className={`position-relative ${bodyClass}`}>
 						{<div style={!isMobile ? titleStyle : {}}>{title}</div> && <h4 className="font-weight-bold" style={!isMobile ? titleStyle : {}}>{title}</h4>}
 						{extra && <div ref={extraRef} style={!isMobile ? extraStyle : {}}>{extra}</div>}

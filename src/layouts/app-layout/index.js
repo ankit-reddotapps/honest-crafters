@@ -35,10 +35,11 @@ export const AppLayout = ({ navCollapsed, navType, location, direction }) => {
   const isNavSide = navType === NAV_TYPE_SIDE
   const isNavTop = navType === NAV_TYPE_TOP
   const getLayoutGutter = () => {
-    if(isNavTop || isMobile) {
-      return 0
-    }
-    return navCollapsed ? SIDE_NAV_COLLAPSED_WIDTH : SIDE_NAV_WIDTH
+    // if(isNavTop || isMobile) {
+    //   return 0
+    // }
+    // return navCollapsed ? SIDE_NAV_COLLAPSED_WIDTH : SIDE_NAV_WIDTH
+    return 0;
   }
 
   const { status } = useThemeSwitcher();
@@ -70,7 +71,7 @@ export const AppLayout = ({ navCollapsed, navType, location, direction }) => {
               <AppViews />
             </Content>
           </div>
-          <Footer />
+          {/* <Footer /> */}
         </Layout>
       </Layout>
       {isMobile && <MobileNav />}

@@ -6,7 +6,7 @@ import PropTypes from 'prop-types'
 const EllipsisDropdown = props => {
 	return (
 		<Dropdown overlay={props.menu} placement={props.placement} trigger={['click']}>
-			<div className="ellipsis-dropdown">
+		<div className="ellipsis-dropdown">
 				<EllipsisOutlined />
 			</div>
 		</Dropdown>

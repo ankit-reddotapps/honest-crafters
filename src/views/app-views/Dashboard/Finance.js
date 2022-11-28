@@ -4,6 +4,11 @@ import dasboardIcon from "../../../assets/dashboard-icon.svg";
 import DataDisplayWidget from "components/shared-components/DataDisplayWidget";
 import { Typography } from "antd";
 import Chart from "./Chart";
+// import {payment} from '../../../assets/svg/icon'
+import invoiceIcon from '../../../assets/svg/invoice.svg'
+import payment from "../../../assets/svg/payment.svg";
+import profit  from "assets/svg/profit.svg";
+import  paymentDue  from "assets/svg/paymentDue.svg";
 
 import {
   DashboardOutlined,
@@ -11,6 +16,7 @@ import {
   QuestionCircleOutlined,
   BarChartOutlined,
 } from "@ant-design/icons";
+import PageHeading from "components/shared-components/PageHeading/PageHeading";
 
 
 const { Title } = Typography;
@@ -20,28 +26,22 @@ const Finance = () => {
   return (
     <>
       {/* Heading */}
-      <div className="d-flex">
-        <span className="mr-1">
-          <img src={dasboardIcon} alt="dashboard Icon"></img>
-        </span>
-        <Title level={4} className="font-weight-bold">
-          Dashboard
-        </Title>
-      </div>
+  
+      <PageHeading icon={dasboardIcon} title="Dashboard" />
       {/* Heading */}
 
 
 
 
       {/* Main */}
-      <div className="d-flex justify-content-between">
+      <div className="d-lg-flex ">
 
 
 
 
         {/* {Left Side} */}
         <div className="mr-2 w-50">
-          <div className="w-100">
+          <div className="w-100" >
             <DataDisplayWidget
               // icon={<BarChartOutlined />}
               value="$24.780"
@@ -52,6 +52,7 @@ const Finance = () => {
               avatarSize={50}
               vertical={true}
               alignItems="start"
+              elementName= "left"
             />
           </div>
           <div className="w-100">
@@ -65,6 +66,7 @@ const Finance = () => {
               avatarSize={50}
               vertical={true}
               alignItems="start"
+              elementName= "left"
             />
           </div>
           <div className="w-100">
@@ -78,6 +80,7 @@ const Finance = () => {
               avatarSize={50}
               vertical={true}
               alignItems="start"
+              elementName= "left"
             />
           </div>
         </div>
@@ -88,58 +91,66 @@ const Finance = () => {
 
 
         {/* {Right side} */}
-        <div className="d-flex ml-2">
-          <div>
-            <div style={{ width: 300 }} className="mr-4">
+        <div className="d-block ml-4 w-50">
+          <div className="d-flex">
+            <div className="mr-4 w-50">
               <DataDisplayWidget
-                icon={<BarChartOutlined />}
+                icon={invoiceIcon}
                 value="$37,212"
-                title="Net Profit"
+                text="Total Invoices"
                 color="cyan"
                 size={"md"}
-                avatarSize={100}
+                
                 vertical={true}
                 alignItems="center"
+                elementName= "right"
+                iconBgColor= "#FFF5CC"
               />
             </div>
-            <div style={{ width: 300 }}>
+            <div className="w-50">
               <DataDisplayWidget
-                icon={<BarChartOutlined />}
+                icon={profit}
                 value="$37,212"
-                title="Net Profit"
+                text="Total Profit"
                 color="cyan"
                 size={"md"}
-                avatarSize={100}
+                
                 vertical={true}
                 classes="my-card"
                 alignItems="center"
+                elementName= "right"
+                iconBgColor= "#EAE6FF"
               />
             </div>
           </div>
-          <div>
-            <div style={{ width: 300 }} className="mr-4">
+          <div className="d-flex">
+            <div  className="mr-4 w-50">
               <DataDisplayWidget
-                icon={<BarChartOutlined />}
+                icon={payment}
                 value="$37,212"
-                title="Net Profit"
+                text="Payments"
                 color="cyan"
                 size={"md"}
-                avatarSize={100}
+                
                 vertical={true}
                 alignItems="center"
+                elementName= "right"
+                iconBgColor= "#D8FCE5"
               />
             </div>
-            <div style={{ width: 300 }}>
+            <div className="w-50">
               <DataDisplayWidget
-                icon={<BarChartOutlined />}
+                icon={paymentDue}
                 value="$37,212"
-                title="Net Profit"
+                text="Payments Due"
                 color="cyan"
                 size={"md"}
-                avatarSize={100}
+                
                 vertical={true}
                 classes="my-card"
                 alignItems="center"
+                elementName= "right"
+                iconBgColor= "#FFE5E5"
               />
             </div>
           </div>

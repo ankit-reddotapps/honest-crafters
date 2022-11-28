@@ -1,16 +1,18 @@
 import React from 'react'
 import ChartWidget from 'components/shared-components/ChartWidget'
 
+import './Chart.css'
+
  const Chart = () => {
 
 	const visitorChartData = {
   	series: [
 			{
-				name: "Session Duration",
+				name: "Forcasted Revenue",
 				data: [45, 52, 38, 24, 33, 26, 21, 20, 6, 8, 15, 10]
 			},
 			{
-				name: "Page Views",
+				name: "Actual Revenue",
 				data: [35, 41, 62, 42, 13, 18, 29, 37, 36, 51, 32, 35]
 			}
 		],
@@ -31,10 +33,10 @@ import ChartWidget from 'components/shared-components/ChartWidget'
 	}
 	return (
 		<ChartWidget 
-			title="Unique Visitors" 
+			title="Revenue Collection" 
 			series={visitorChartData.series} 
 			xAxis={visitorChartData.categories} 
-			height={400}
+			height={500}
 		/>
 	)
 }

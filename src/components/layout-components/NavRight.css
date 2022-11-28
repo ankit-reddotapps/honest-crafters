@@ -1,3 +1,8 @@
 .nav-right{
   list-style: none;
+  overflow-y: hidden;
+}
+
+.nav-right li{
+  overflow: hidden;
 }
