@@ -7,7 +7,7 @@ import Modal from "components/UI/Modal";
 import { Menu, Typography, Button } from "antd";
 import Icon from "@ant-design/icons";
 
-import { ViewDetailsIcon , DeleteIcon , EditIcon } from "../ActionIcons";
+import { ViewDetailsIcon , DeleteIcon , CreatePoIcon } from "../ActionIcons";
 
 
 
@@ -19,7 +19,7 @@ const Actions = () => {
   const match = useRouteMatch();
   
   const ViewDetailsHandler = () => {
-    history.push(`${match.path}/spray-paints`)
+    
   }
 
   // const closeInquiryModal = (
@@ -68,12 +68,7 @@ const Actions = () => {
                 Delete
               </span>
             </Menu.Item >
-            <Menu.Item >
-              <span className="d-flex align-items-center">
-                <Icon className="mr-2" component={EditIcon}  />
-                Edit
-              </span>
-            </Menu.Item>
+            
            
           </Menu>
         }

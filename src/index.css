@@ -48,3 +48,24 @@
 .ant-input-number{
   width: 100%;
 }
+
+/* SearchBox Icon */
+.ant-input-search-button {
+  height: 2.5rem !important;
+}
+
+/* Primary Button */
+
+.ant-btn-primary {
+  color: #fff;
+  background: #0099A8;
+  border-color: #0099A8;
+  text-shadow: 0 -1px 0 rgb(0 0 0 / 12%);
+  box-shadow: 0 2px 0 rgb(0 0 0 / 5%);
+}
+
+.ant-btn-primary:focus, .ant-btn-primary:hover {
+  color: #fff;
+  background: #01aab9 !important;
+  border-color: #01aab9 !important;
+}

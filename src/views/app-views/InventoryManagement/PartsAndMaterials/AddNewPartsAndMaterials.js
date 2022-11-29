@@ -40,7 +40,7 @@ const content = (
           <Title strong level={3} className="mb-3">
             Pricing
           </Title>
-          <Form>
+          <Form layout="vertical">
             <Form.Item
               label="Cost Price"
               name="costPrice"

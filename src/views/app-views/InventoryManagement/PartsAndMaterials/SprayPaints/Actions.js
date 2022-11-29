@@ -7,7 +7,7 @@ import Modal from "components/UI/Modal";
 import { Menu, Typography, Button } from "antd";
 import Icon from "@ant-design/icons";
 
-import { ViewDetailsIcon , DeleteIcon , CreatePoIcon } from "../ActionIcons";
+import { ViewDetailsIcon , DeleteIcon , CreatePoIcon } from "../../ActionIcons";
 
 
 

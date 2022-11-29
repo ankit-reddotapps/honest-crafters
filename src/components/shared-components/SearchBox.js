@@ -5,7 +5,7 @@ const { Search } = Input;
 const suffix = (
   <AudioOutlined
     style={{
-      fontSize: 16,
+      fontSize: 32,
       color: '#1890ff',
     }}
   />

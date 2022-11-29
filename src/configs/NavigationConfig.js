@@ -171,8 +171,8 @@ const dashBoardNavTree = [
             submenu: [],
           },
           {
-            key: "categories",
-            path: `${APP_PREFIX_PATH}/inventory-management/categories`,
+            key: "category",
+            path: `${APP_PREFIX_PATH}/inventory-management/category`,
             title: "Categories",
             
             breadcrumb: false,

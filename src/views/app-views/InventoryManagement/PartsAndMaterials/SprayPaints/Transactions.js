@@ -62,7 +62,7 @@ const data = [
 ];
 for (let i = 2; i <= 7; i++) {
   data.push({
-    key: 1,
+    key: i,
     transactionId: "#123456",
     type: "Service",
     orderId: "#123456789",

@@ -7,6 +7,9 @@ import AddNewPartsAndMaterials from "./PartsAndMaterials/AddNewPartsAndMaterials
 import SprayPaints from "./PartsAndMaterials/SprayPaints/SprayPaints";
 import AddNewPo from "./PartsAndMaterials/SprayPaints/AddNew/AddNewPo";
 import AddNewQuotation from "./PartsAndMaterials/SprayPaints/AddNew/AddNewQuotation";
+import Category from "./Category/Category";
+import AddNewCategory from "./Category/AddNew/AddNewCategory";
+import AddNewSubCategory from "./Category/AddNew/AddNewSubCategory"
 
 
 
@@ -33,6 +36,15 @@ const InventoryManagement = () => {
       </Route>
       <Route path={`${match.path}/parts-and-materials/spray-paints/add-new-quotation`} exact>
         <AddNewQuotation/>
+      </Route>
+      <Route path={`${match.path}/category`} exact>
+        <Category/>
+      </Route>
+      <Route path={`${match.path}/category/add-new-category`} exact>
+        <AddNewCategory/>
+      </Route>
+      <Route path={`${match.path}/category/add-new-sub-category`} exact>
+        <AddNewSubCategory/>
       </Route>
       
     </div>
