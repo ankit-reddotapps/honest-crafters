@@ -10,7 +10,8 @@ import AddNewQuotation from "./PartsAndMaterials/SprayPaints/AddNew/AddNewQuotat
 import Category from "./Category/Category";
 import AddNewCategory from "./Category/AddNew/AddNewCategory";
 import AddNewSubCategory from "./Category/AddNew/AddNewSubCategory"
-
+import Vendors from "./Vendors/Vendors";
+import AddNewVendor from "./Vendors/AddNew/AddNewVendor"
 
 
 
@@ -45,6 +46,13 @@ const InventoryManagement = () => {
       </Route>
       <Route path={`${match.path}/category/add-new-sub-category`} exact>
         <AddNewSubCategory/>
+      </Route>
+      <Route path={`${match.path}/vendors`} exact>
+        <Vendors/>
+      </Route>
+      
+      <Route path={`${match.path}/vendors/add-new-vendor`} exact>
+        <AddNewVendor/>
       </Route>
       
     </div>
