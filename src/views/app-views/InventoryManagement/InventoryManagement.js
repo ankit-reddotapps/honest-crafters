@@ -12,6 +12,9 @@ import AddNewCategory from "./Category/AddNew/AddNewCategory";
 import AddNewSubCategory from "./Category/AddNew/AddNewSubCategory"
 import Vendors from "./Vendors/Vendors";
 import AddNewVendor from "./Vendors/AddNew/AddNewVendor"
+import VendorDetails from "./Vendors/VendorDetails/VendorDetails";
+import CreatePo from "./Vendors/VendorDetails/CreatePo";
+import Stock from "./Stock/Stock";
 
 
 
@@ -53,6 +56,16 @@ const InventoryManagement = () => {
       
       <Route path={`${match.path}/vendors/add-new-vendor`} exact>
         <AddNewVendor/>
+      </Route>
+      <Route path={`${match.path}/vendors/vendor-details`} exact>
+        <VendorDetails/>
+      </Route>
+      
+      <Route path={`${match.path}/vendors/vendor-details/create-po`} exact>
+        <CreatePo/>
+      </Route>
+      <Route path={`${match.path}/stock`} exact>
+        <Stock/>
       </Route>
       
     </div>

@@ -1,7 +1,8 @@
 .ant-menu.ant-menu-dark{
-  background-color: #111118;
-  height: auto !important;
-  min-height: 100vh;
+  background: #111118 !important;
+  /* height: auto !important;
+  min-height: 100vh; */
+  
 }
 
 /* .ant-menu-item span{

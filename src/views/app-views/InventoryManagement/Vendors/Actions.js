@@ -19,7 +19,7 @@ const Actions = () => {
   const match = useRouteMatch();
   
   const ViewDetailsHandler = () => {
-    
+    history.push(`${match.path}/vendor-details`)
   }
 
   // const closeInquiryModal = (
@@ -62,12 +62,7 @@ const Actions = () => {
                 View Details
               </span>
             </Menu.Item>
-            <Menu.Item >
-              <span className="d-flex align-items-center">
-                <Icon className="mr-2" component={DeleteIcon}  />
-                Delete
-              </span>
-            </Menu.Item >
+            
             
            
           </Menu>

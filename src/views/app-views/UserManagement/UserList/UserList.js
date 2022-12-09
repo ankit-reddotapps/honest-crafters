@@ -14,7 +14,7 @@ import Filter from "./Filter";
 import Modal from "components/UI/Modal";
 import Export from "./Export-UserList";
 import { Link , useRouteMatch  } from "react-router-dom";
-import { set } from "lodash";
+
 
 const UserList = () => {
 
@@ -31,11 +31,13 @@ const UserList = () => {
 
   useEffect(() => {
     const getUsers = async() => {
+      
       let response;
       try{
         response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/users/get-all-users`)
         if(response.data.success){
           setUsers(response.data.data);
+          // console.log(response.data.data);
         }
         else{
           throw new Error(response.data.message || "Something went Wrong");

@@ -65,30 +65,31 @@ import Icon from "@ant-design/icons"
 )
  const DeliveryManagement = () => (
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_3143_14695)">
-<path d="M20 2H4C3 2 2 2.9 2 4V7.01C2 7.73 2.43 8.35 3 8.7V20C3 21.1 4.1 22 5 22H19C19.9 22 21 21.1 21 20V8.7C21.57 8.35 22 7.73 22 7.01V4C22 2.9 21 2 20 2ZM19 20H5V9H19V20ZM20 7H4V4H20V7Z" fill="#AAB3B7"/>
-<path d="M15 12H9V14H15V12Z" fill="#AAB3B7"/>
+<g clip-path="url(#clip0_4614_15931)">
+<path d="M20 8H17V4H3C1.9 4 1 4.9 1 6V17H3C3 18.66 4.34 20 6 20C7.66 20 9 18.66 9 17H15C15 18.66 16.34 20 18 20C19.66 20 21 18.66 21 17H23V12L20 8ZM19.5 9.5L21.46 12H17V9.5H19.5ZM6 18C5.45 18 5 17.55 5 17C5 16.45 5.45 16 6 16C6.55 16 7 16.45 7 17C7 17.55 6.55 18 6 18ZM8.22 15C7.67 14.39 6.89 14 6 14C5.11 14 4.33 14.39 3.78 15H3V6H15V15H8.22ZM18 18C17.45 18 17 17.55 17 17C17 16.45 17.45 16 18 16C18.55 16 19 16.45 19 17C19 17.55 18.55 18 18 18Z" fill="white"/>
 </g>
 <defs>
-<clipPath id="clip0_3143_14695">
+<clipPath id="clip0_4614_15931">
 <rect width="24" height="24" fill="white"/>
 </clipPath>
 </defs>
 </svg>
 
+
 )
  const InventoryManagement = () => (
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_3143_14695)">
-<path d="M20 2H4C3 2 2 2.9 2 4V7.01C2 7.73 2.43 8.35 3 8.7V20C3 21.1 4.1 22 5 22H19C19.9 22 21 21.1 21 20V8.7C21.57 8.35 22 7.73 22 7.01V4C22 2.9 21 2 20 2ZM19 20H5V9H19V20ZM20 7H4V4H20V7Z" fill="#AAB3B7"/>
-<path d="M15 12H9V14H15V12Z" fill="#AAB3B7"/>
-</g>
-<defs>
-<clipPath id="clip0_3143_14695">
-<rect width="24" height="24" fill="white"/>
-</clipPath>
-</defs>
-</svg>
+  <g clip-path="url(#clip0_404_4036)">
+  <path d="M20 2H4C3 2 2 2.9 2 4V7.01C2 7.73 2.43 8.35 3 8.7V20C3 21.1 4.1 22 5 22H19C19.9 22 21 21.1 21 20V8.7C21.57 8.35 22 7.73 22 7.01V4C22 2.9 21 2 20 2ZM19 20H5V9H19V20ZM20 7H4V4H20V7Z" fill="#AAB3B7"/>
+  <path d="M15 12H9V14H15V12Z" fill="#AAB3B7"/>
+  </g>
+  <defs>
+  <clipPath id="clip0_404_4036">
+  <rect width="24" height="24" fill="white"/>
+  </clipPath>
+  </defs>
+  </svg>
+  
 
 )
  const FinanceManagement = () => (
@@ -117,7 +118,7 @@ export const AccountManagementIcon = () => { return <Icon component={AccountMana
 export const InquiryManagementIcon = () => { return <Icon component={InquiryManagement}/>}
 export const ItemAndServicesIcon = () => { return <Icon component={ItemAndServices}/>}
 export const DeliveryManagementIcon = () => { return <Icon component={DeliveryManagement}/>}
-export const InventoryManagementIcon = () => { return <Icon component={InquiryManagement}/>}
+export const InventoryManagementIcon = () => { return <Icon component={InventoryManagement}/>}
 export const FinanceManagementIcon = () => { return <Icon component={FinanceManagement}/>}
 export const ReportIcon = () => { return <Icon component={Reports}/>}
 

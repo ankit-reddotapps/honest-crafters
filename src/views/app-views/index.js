@@ -21,6 +21,8 @@ export const AppViews = () => {
         <Route path={`${APP_PREFIX_PATH}/inquiry-management`} component={lazy(() => import(`./InquiryManagement/InquiryManagement`))} />
         <Route path={`${APP_PREFIX_PATH}/items-and-services`} component={lazy(() => import(`./ItemsAndServices/ItemsAndServices`))} />
         <Route path={`${APP_PREFIX_PATH}/inventory-management`} component={lazy(() => import(`./InventoryManagement/InventoryManagement`))} />
+        <Route path={`${APP_PREFIX_PATH}/delivery-management`} component={lazy(() => import(`./DeliveryManagement/DeliveryManagement`))} />
+        <Route path={`${APP_PREFIX_PATH}/finance-management`} component={lazy(() => import(`./FinanceManagement/FinanceManagement`))} />
         
         <Redirect from={`${APP_PREFIX_PATH}`} to={`${APP_PREFIX_PATH}/dashboard/finance`} />
         

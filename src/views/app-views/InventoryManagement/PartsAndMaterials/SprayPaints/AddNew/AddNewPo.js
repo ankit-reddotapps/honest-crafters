@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Tabs, Button, Row, Col , Table , Card , List , Divider , Typography} from "antd";
+import { Tabs, Button, Row, Col , Table , Card , List , Divider , Typography, Space} from "antd";
 import Icon from "@ant-design/icons";
 
 import { InventoryManagementPageIcon } from "assets/svg/icon";
@@ -9,7 +9,8 @@ import { ActivePurchaseOrdersIcon } from "views/app-views/InventoryManagement/Ta
 import UploadBox from "components/shared-components/UploadBox";
 import AddNewPoForm from "./AddNewPoForm";
 
-import classes from "./AddNewPo.module.css";
+
+import { useHistory } from "react-router-dom";
 
 const {Title , Text} = Typography
 
@@ -87,96 +88,99 @@ const dataGrandTotal = [
   { text: "Tax", amt: "S$100.00" },
 ];
 
-const content = (
-  <React.Fragment>
-    <Row gutter={20}>
-      <Col span={16}>
-        <AddNewPoForm />
-      </Col>
-      <Col span={8}>
-        <UploadBox
-          title="Attachments"
-          text={`Drag & drop files here or Choose Files`}
-          hint="Files supported:jpg,png,jpeg,etc"
-        />
-      </Col>
-    </Row>
-
-    <Card>
-      <Table dataSource={dataSource} columns={columns} pagination={false}/>;
-      <div className="d-flex justify-content-end">
-          <Row
-            style={{ width: "40%" }}
-            className="d-flex justify-content-center"
-          >
-            <Col span={12}>
-              <List
-                dataSource={dataGrandTotal}
-                renderItem={(item) => (
-                  <List.Item
-                    key={item.text}
-                    className="pl-0 border-0 d-flex justify-content-center"
-                  >
-                    <div className="d-flex align-items-center ">
-                      <Text>{item.text}</Text>
-                      
-                    </div>
-                  </List.Item>
-                )}
-              />
-            </Col>
-            <Col span={12}>
-              <List
-                dataSource={dataGrandTotal}
-                renderItem={(item) => (
-                  <List.Item
-                    key={item.amt}
-                    className="pl-0 border-0 d-flex justify-content-center"
-                  >
-                    <Text strong className="d-flex align-items-center">{item.amt}</Text>
-                  </List.Item>
-                )}
-              />
-            </Col>
-            
-
-            
-          </Row>
-        </div>
-        <Divider />
-
-
-        <div className="d-flex justify-content-end">
-          <Row
-            style={{ width: "40%" }}
-            className="d-flex justify-content-center"
-          >
-            <Col span={12} className="text-center">
-            <Text strong className="mr-4">Total</Text>
-            </Col>
-            <Col span={12} className="text-center">
-            <Text strong className="mr-4">S$100.00</Text>
-            </Col>
-            
-
-            
-          </Row>
-        </div>
-        
-    </Card>
-
-    <div className={`d-flex justify-content-end ${classes.actions}`}>
-      <Button>Back</Button>
-      <Button>Clear All</Button>
-
-      <Button type="primary" className={classes.save_btn}>
-        Save
-      </Button>
-    </div>
-  </React.Fragment>
-);
 
 const AddNewPo = () => {
+  const history = useHistory();
+
+  const content = (
+    <React.Fragment>
+      <Row gutter={20}>
+        <Col span={16}>
+          <AddNewPoForm />
+        </Col>
+        <Col span={8}>
+          <UploadBox
+            title="Attachments"
+            text={`Drag & drop files here or Choose Files`}
+            hint="Files supported:jpg,png,jpeg,etc"
+          />
+        </Col>
+      </Row>
+  
+      <Card>
+        <Table dataSource={dataSource} columns={columns} pagination={false}/>;
+        <div className="d-flex justify-content-end">
+            <Row
+              style={{ width: "40%" }}
+              className="d-flex justify-content-center"
+            >
+              <Col span={12}>
+                <List
+                  dataSource={dataGrandTotal}
+                  renderItem={(item) => (
+                    <List.Item
+                      key={item.text}
+                      className="pl-0 border-0 d-flex justify-content-center"
+                    >
+                      <div className="d-flex align-items-center ">
+                        <Text>{item.text}</Text>
+                        
+                      </div>
+                    </List.Item>
+                  )}
+                />
+              </Col>
+              <Col span={12}>
+                <List
+                  dataSource={dataGrandTotal}
+                  renderItem={(item) => (
+                    <List.Item
+                      key={item.amt}
+                      className="pl-0 border-0 d-flex justify-content-center"
+                    >
+                      <Text strong className="d-flex align-items-center">{item.amt}</Text>
+                    </List.Item>
+                  )}
+                />
+              </Col>
+              
+  
+              
+            </Row>
+          </div>
+          <Divider />
+  
+  
+          <div className="d-flex justify-content-end">
+            <Row
+              style={{ width: "40%" }}
+              className="d-flex justify-content-center"
+            >
+              <Col span={12} className="text-center">
+              <Text strong className="mr-4">Total</Text>
+              </Col>
+              <Col span={12} className="text-center">
+              <Text strong className="mr-4">S$100.00</Text>
+              </Col>
+              
+  
+              
+            </Row>
+          </div>
+          
+      </Card>
+  
+      <Space size="middle" className={`d-flex justify-content-end`}>
+        <Button style={{minWidth: "125px"}} onClick={() => history.goBack()}>Back</Button>
+        <Button style={{minWidth: "125px"}}>Clear All</Button>
+  
+        <Button style={{minWidth: "125px"}} type="primary">
+          Save
+        </Button>
+      </Space>
+    </React.Fragment>
+  );
+  
   return (
     <React.Fragment>
       <PageHeading
